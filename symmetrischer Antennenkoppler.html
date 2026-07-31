@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>symmetrischer Antennenkoppler</title>
+<link rel="icon" type="image/x-icon" href="Pictures/faviconHB.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+	<nav class="nav" aria-label="Hauptnavigation">
+		<a class="brand" href="index.html">
+			<span class="logo">HB</span>
+			<span class="call">HB9AWJ<small>swiss shortwave radio station</small></span>
+		</a>
+		<input type="checkbox" id="navtoggle" class="nav-toggle" hidden />
+		<label class="nav-burger" for="navtoggle" aria-label="Menü öffnen"><span></span></label>
+		<ul class="nav-links">
+			<li><a href="swiss%20shortwave%20radio%20station%20HB9AWJ.html">Home</a></li>
+			<li><a class="active" aria-current="page" href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennenkoppler</a></li>
+			<li><a href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a></li>
+			<li><a href="endgespeiste%20Halbwellenantenne.html">endgespeiste Halbwellenantenne</a></li>
+			<li><a href="Monopole%20Groundplane.html">Monopole &ndash; Groundplane</a></li>
+			<li><a href="Luftbalun.html">Luftbalun</a></li>
+			<li><a href="cw%20decoder.html">CW Decoder</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="page-hero">
+	<div class="wrap">
+		<p class="eyebrow">swiss shortwave radio station &middot; HB9AWJ</p>
+		<h1>Optimierung der Verluste bei der Antennenanpassung mit einem symmetrischen Antennenkoppler (mit Fernabstimmung). Frage der Notwendigkeit eines Baluns ? Mantelwellensperre ?</h1>
+		<p class="subtitle">Optimization for low loss antenna matching using a symmetric antenna coupler with remote tuning. Need of a balun ? common mode choke ?</p>
+	</div>
+</section>
+
+<main class="article">
+	<p>Anstelle der Verwendung einer Endstufe lohnt sich vielleicht ein
+	Blick auf mögliche Verluste von HF-Energie auf dem Wege vom Sender
+	bis zur Antenne. Meist hat es in einer Antennenanlage mehrere
+	Elemente, wo man unwissentlich oder aus Nachlässigkeit zum Teil
+	beträchtlich Leistung verliert. Eine Analyse des Systems
+	"Koppler-Antennenzuleitung-Antenne" auf mögliche, zu grosse
+	Verluste kann hier sinnvoll sein. Die vollständige Optimierung einer
+	Antennenanlage ist leider in vielen Fällen durch räumliche und
+	bauliche Bedingungen eingeschränkt. Um auch mit einer in diesem Sinne
+	eingeschränkten Antennenanlage eine Optimierung zu erreichen,
+	empfiehlt sich eine messtechnische Analyse der Antenne und eine
+	darauf basierende Auswahl von Antennenzuleitung und Art der
+	Koppelung. Hierzu möchte ich als Beispiel die Analyse und Berechnung
+	meiner Antennenanlage vorstellen.</p>
+
+	<p>Folgende räumliche und bauliche Einschränkungen sowie Anforderungen
+	bestehen für meinen Multibanddipol:</p>
+
+	<ul>
+		<li>Die Antenne wird für 80m, 60m und 40m, und als Erweiterung eventuell für 160m konzipiert</li>
+		<li>Die Platzverhältnisse erlauben einen Dipol von maximal 2 x 17 m Schenkellänge unter Verwendung einer leichten inverted-V Form. Die maximale
+		Antennenhöhe ist am Speisepunkt 8 m über dem Boden (gleich hoch wie das Flachdach des Dachgeschosses des Hauses), die Dipolenden gehen zu Stangen
+		4.5 m über dem Boden.</li>
+		<li>Die horizontale Distanz des Dipoleinspeisepunktes zur Metallumfassung des Flachdaches beträgt nur 1.5 m, die Dipolenden sind 6 m von der Hausfassade weg.</li>
+		<li>eine 2.7m lange parallele Doppelleitung vom
+		Einspeisepunkt bis zum Koppler kann realisiert werden.</li>
+		<li>Die Kabeldurchführung ins Haus ist aus baulichen Gründen nur mit einem 10m
+		langen Koaxialkabel (Aircell 7) möglich.</li>
+	</ul>
+
+	<p>Aus obigen Bedingungen resultiert ein relativ tief aufgehängter Multiband-Dipol, der wegen der geringen Aufbauhöhe NVIS-Eigenschaften aufweist. Die geringe Aufbauhöhe und die
+	Nähe zum Haus mit dessen vielen Metallelementen (metallene Dach- und Brüstungsumfassungen sowie Metallgeländer) wirken sich auf die Fusspunktimpedanz des Dipols aus.
+	Der Dipol kann auf 160m durch Kurzschluss der Hühnerleiterenden und mit einem einarmigen Betrieb im Koppler auch asymmetrisch als T-Antenne gegenüber Erde betrieben werden.
+	Der Energietransport auf dem Koaxialkabel vom Sender zum Koppler
+	erfolgt im "matched line Modus", es treten also hier keine zusätzlichen
+	Verluste durch Reflexion (Fehlanpassung) auf.</p>
+
+	<p>Als erstes muss die Eingansimpedanz an der 2.7m langen 600 Ω
+	Hühnerleitung gemessen werden. Es wurde bewusst eine eine breite 600 Ω
+	Leitung und nicht eine 450 Ω Wireman ausgewählt, da bei letzterer bei
+	Regen unter Umständen grosse Verlust auftreten können (im Extremfall bis
+	zu 3 - 4
+	dB !).<br />
+	Mit dem miniVNA messe ich folgende Impedanzen:</p>
+
+	<p><strong>Tabelle 1:</strong> Gemessene Eingangsimpedanzen des oben beschriebenen
+	Dipols mit 2 x 17 m mit einer 2.7m langen 600
+	Ω Speiseleitung.
+	Die Impedanzen am
+	Einspeisepunkt des Dipols wurden interessehalber berechnet.</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<thead>
+				<tr>
+					<th>Frequenz</th>
+					<th>Eingangsimpedanz an der 600 Ω Doppeldrahtleitung</th>
+					<th>Impedanz am Fusspunkt des Dipols</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th><small>(gemessen mit miniVNA pro)</small></th>
+					<th><small>(berechnet mit TLDetails)</small></th>
+				</tr>
+				<tr>
+					<th>MHz</th>
+					<th>Ω</th>
+					<th>Ω</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>3.5</td><td>18 - j 168</td><td>21 - j 319</td></tr>
+				<tr><td>3.65</td><td>20 - j 90</td><td>22 - j 235</td></tr>
+				<tr><td>3.8</td><td>47 - j 59</td><td>51 - j 206</td></tr>
+				<tr><td>5.358</td><td>290 + j 1280</td><td>106 + j 631</td></tr>
+				<tr><td>7.1</td><td>630 - j 2230</td><td>983 + j 2760</td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Für die nun nötige Auswahl des Aufbaus des Kopplers habe ich
+	Folgendes berücksichtigt:</p>
+
+	<p>Der Koppler muss einen symmetrischen Betrieb gewährleisten.
+	Prinzipiell gibt es die Möglichkeit, einen symmetrischen Koppler zu
+	verwenden, oder einen asymmetrischen Tuner mit einer Symmetrierung.
+	Letztere Variante ist einfacher aufzubauen und funktioniert genauso
+	gut. Dazu ist jedoch ein Balun nötig. Zu Balun und
+	Mantelwellensperren möchte ich zunächst noch eine Anmerkung
+	bezüglich der verwendeten Begriffe machen:</p>
+
+	<p>Ich unterscheide hier im Folgenden zwischen dem Begriff eines
+	Baluns und dem einer Mantelwellensperre (common mode choke). Diese
+	Differenzierung wird nicht überall gleich gehandhabt und führt
+	deshalb auch zu Verwirrung. Ein Balun ist
+	so aufgebaut und dient dazu, eine Symmetrierung herbeizuführen. Die
+	Mantelwellsperre in der Zuleitung dient als Drossel, um
+	Gleichtaktanteile gegen den Sender hin zu unterdrücken. Natürlich
+	kann unter Umständen auch mit einer Mantelwellensperre eine
+	Symmetrierung erzwungen werden. Einen solchen Fall betrachte ich
+	hier nicht. Ich verwende hier den Begriff Mantelwellensperre nur als
+	Gleichtaktdrossel.</p>
+
+	<p>Bei einem Balun treten oft viel grössere Verluste
+	auf als gemeinhin angenommen. Entsprechende Berechnungen müssen jedoch
+	durchgeführt werden. Nach Berechnungen von DL3LH sind je nach
+	Situation (Frequenz, Impedanztransformation, Symmetrierung)
+	sehr hohe Verluste durchaus möglich. So habe
+	ich mich für die Konstruktion eines symmetrischen Tuners
+	entschieden, mit der Möglichkeit, wenn möglich einen Balun weglassen zu können.
+	Es stellt sich aber noch die Frage, ob eine
+	Mantelwellensperre in der Zuleitung nötig ist oder nicht.</p>
+
+	<p>Im weiteren muss die Art des LC-Anpassnetzwerk
+	bestimmt werden. Beliebt sind aus verschiedenen, und durchaus auch guten Gründen, vor allem die T- oder
+	Pi-Anpassung. Ueber die Vor- und Nachteile jedes dieser Kopplerarten gibt es
+	viele Veröffentlichungen. Ich habe mich für ein einfaches LC-Netzwerk entschieden.
+	Ein solches ist die einfachste, sicherste und verlustärmste Variante. Das einfache LC-Netzwerk ist eindeutig bei der Abstimmung, erlaubt nicht mehrere und vor allem
+	keine Kamikaze-Einstellungen, und weist gegenüber dem Pi-Filter oder der T-Anpassung oft geringere Verluste auf.</p>
+
+	<p>Aufgrund der mir nun vorliegenden Messwerte der Eingangsimpedanz an
+	der Hühnerleiter und nach dem Entscheid für einen symmetrischen
+	LC-Koppler können nun die Verluste vorausberechnet werden. Daraus
+	ergibt sich, dass hier eine
+	Hochpassvariante (mit C seriell und L parallel) am wenigsten Verluste
+	macht. Die Berechnung eines Konzept mit einem asymmetrischen Tuner
+	und dafür mit einem (Luft-)Balun am Kopplerausgang ergab teilweise
+	grosse zusätzliche Verluste von &gt;1 dB. Die Antennensituation hier
+	verlangt somit einen symmetrischen Koppler, und, wenn möglich ohne
+	Balun, aber dafür wenigstens einer Mantelwellensperre in der
+	koaxialen Zuleitung.</p>
+
+	<p>In welchen Situationen kann nun ein Balun weggelassen werden?<br />
+	Die symmetrische Speisung wird mit der Verwendung eines
+	symmetrischen Kopplers erreicht (Abbildung 1). Das Problem sind allfällige rückläufige Gleichtaktanteile, welche wegen
+	gewissen Asymmetrien im Speiseleitung-Antennensystem auftreten und
+	sich am Uebergang vom Koaxialkabel zur symmetrischen Struktur
+	manifestieren. Diese gilt es zu eliminieren oder abzuleiten.<br />
+	Nach W8JI kann bei einer einigermassen symmetrischen Antennenanlage
+	und unter der Verwendung eines symmetrischen Kopplers unter
+	Umständen auf einen Balun verzichtet werden. Walter, DL3LH hat zudem
+	folgende Bedingungen zum möglichen Weglassen eines Baluns erwähnt:
+	der Ausgleich allfälliger Gleichtaktanteile erfolgt bei Verwendung
+	einer Hochpasskonstellation mit galvanischer Koppelung der beiden
+	Schenkel der Paralleldrahtleitung über die parallel liegende
+	Induktivität (Abbildung 2a), oder die Ableitung der
+	Gleichtaktanteile bei der Verwendung einer Tiefpasskonstellation
+	wird mit zwei mittig geerdeten Drosseln oder Widerständen erreicht
+	(Abbildung 2b). Auch diese letzte Variante führt gemäss den
+	Berechnungen zu praktisch nicht relevanten zusätzlichen Verlusten.
+	Sollten trotz dieser Massnahmen Probleme auftreten, kann man am
+	Tunereingang eine Mantelwellensperre einsetzen.</p>
+
+	<div class="gallery">
+		<figure>
+			<img alt="Schema Symmetrierung" height="327" src="Pictures/Prinzipschema%20Symmetrierglied360x327.png" width="360" />
+			<figcaption>Abbildung 1: generelles Prinzipschaltbild für eine Symmetrierung</figcaption>
+		</figure>
+		<figure>
+			<img alt="Schema Gleichtaktausgleich" height="230" src="Pictures/Schema%20Gleichtaktausgleich%20Koppler269x230.png" width="269" />
+			<figcaption>Abbildung 2 a: Cs - Lp - Konfiguration:<br />
+			Die Induktivität liegt parallel. Gleichtaktströme können über die galvanische Verbindung der Spule ausgeglichen werden</figcaption>
+		</figure>
+		<figure>
+			<img alt="Ableitung Gleichtaktanteile" height="230" src="Pictures/Schema%20Gleichtaktableitung%20Koppler358x230.png" width="358" />
+			<figcaption>Abbildung 2 b: Ls - Cp - Konfiguration:<br />
+			Ein Ausgleich der Gleichtaktanteile ist über die parallelliegende
+			Kapazität nicht möglich. Deshalb erfolgt die Ableitung über mittig geerdete 2.7 kΩ
+			Widerstände (oder über 2.5 mH Drosseln)</figcaption>
+		</figure>
+	</div>
+
+	<p>Aufgrund der Erfordernisse habe ich einen manuell fernsteuerbaren,
+	symmetrischen Cs-Lp-Koppler in Hochpasskonfiguration unter Weglassen
+	eines Baluns, aber mit einer Mantelwellensperre bei der Zuleitung
+	gebaut (Abbildung 3; Bild 1). Bei der Realisation der Kopplers kommt
+	eine Abwandlung des Christiankopplers in Hochpassschaltung zum Zuge,
+	mit nur einer L-Bank (in Parallelschaltung), sowie einer Erweiterung
+	der beiden C-Banken (je in Serie) um jeweils eine zusätzliche
+	Schaltstufe von je 800 pF (was dann 1'597 pF pro C-Bank ergibt).
+	Damit lässt sich eine wegen der Serieschaltung der Kapazitäten
+	resultierende Gesamtkapazität von doch 798 pF erreichen, wie ich sie
+	hier aufgrund der Eingangsimpedanz an der Hühnerleiter brauche.<br />
+	Die Kopplereinstellung erfolgt ferngesteuert, wobei ich eine vereinfachte Ansteuerung
+	zur Steuerung der Relais realisiert habe
+	(Bild 4).</p>
+
+	<p>(Der
+	Christiankoppler wird unter
+	<a href="https://www.darc.de/der-club/distrikte/e/ortsverbaende/39/bauprojekte/christian-koppler/" target="_blank">https://www.darc.de/der-club/distrikte/e/ortsverbaende/39/bauprojekte/christian-koppler/</a>
+	genauer beschrieben).</p>
+
+	<p>Die praktische Testung zeigt ein völlig problemloses Verhalten des Kopplers, von möglichen Gleichtaktströmen mit vagabundierender HF im Shack
+	lässt sich nichts feststellen, egal ob eine Mantelwellensperre
+	verwendet wird oder nicht. Die Antenne scheint somit eine gute
+	Symmetrie aufzuweisen. Es wurde hier jedoch ein Gehäuse aus
+	Kunststoff verwendet. Wird der symmetrische Koppler in einem
+	Metallgehäuse untergebracht, ist schon aufgrund theoretischer
+	Ueberlegungen als auch nach meiner praktischen Erfahrung eine
+	Mantelwellensperre zwingend nötig (natürlich innerhalb des
+	Metallgehäuses). Die Mantelwellensperre muss in
+	einem solchen Fall den von der Masse isoliert aufgebauten HF-Teil
+	mit den Kondensatoren und den Spulen von der Masse des Gehäuses
+	entkoppeln.</p>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Abbildung 3:</strong></p>
+			<p>Aufgrund der Serieschaltung der Kapazitäten von C und C'
+			ergibt sich eine maximal einstellbare Gesamtkapazität von 798
+			pF, mit einer Abstufung von jeweils
+			1.55 pF.</p>
+			<p>Die Induktivität ist in Schritten von 0.25
+			µH einstellbar, von 0.25 µH bis
+			31.75 µH .</p>
+			<p>Am Eingang des Kopplers ist eine Mantelwellensperre nach W1JR eingesetzt
+			(10 Wdg RG-58 auf zwei FT240-43); der Energietransport der Gegentaktanteile wird dadurch nicht gedämpft.</p>
+		</div>
+		<figure>
+			<img alt="symmetrischer Koppler mit Mantelsperre" height="327" src="Pictures/Schema%20symm%20Koppler%20mit%20Mantelsperre655x327.png" width="655" />
+		</figure>
+	</div>
+
+	<p><strong>Tabelle 2:</strong>
+	Dipol 2 x 17 m
+	(leichte inverted-V Form),
+	4.5m bis 8 m (Fusspunkt) über dem Boden,
+	2.7 m 600 Ω Paralleldrahtspeiseleitung,
+	Güte für Kondensator und Spule:
+	Q<sub>C </sub>= 500, Q<sub>L</sub> = 100,
+	10 m Koaxialkabel (Aircell 7) Sender zu Koppler</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<thead>
+				<tr>
+					<th>MHz</th>
+					<th>Eingangsimpedanz Paralleldrahtleitung 600 Ω</th>
+					<th>Verlust HL 600 Ω</th>
+					<th>CL-Netzwerk (Hochpass)<br />C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L</th>
+					<th>Verlust CL-Netzwerk</th>
+					<th>Verlust Koaxialkabel 10 m Aircell 7 (matched line loss)</th>
+					<th>Total Verluste</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th>Ω</th>
+					<th>dB</th>
+					<th>pF&nbsp;&nbsp;&nbsp;&nbsp;µH</th>
+					<th>dB</th>
+					<th>dB</th>
+					<th>dB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>3.500</td><td>18 - j 168</td><td>0.100</td><td>256 ; 3</td><td>0.66</td><td>0.135</td><td class="red">0.895</td></tr>
+				<tr><td>3.650</td><td>20 - j 90</td><td>0.094</td><td>306 ; 2</td><td>0.33</td><td>0.135</td><td class="red">0.559</td></tr>
+				<tr><td>3.800</td><td>47 - j 59</td><td>0.041</td><td>798 ; 1.25</td><td>0.12</td><td>0.135</td><td class="red">0.296</td></tr>
+				<tr><td>5.358</td><td>290 + j 1280</td><td>0.015</td><td>56 ; 27</td><td>0.35</td><td>0.16</td><td class="red">0.525</td></tr>
+				<tr><td>7.100</td><td>630 - j 2230</td><td>0.002</td><td>31 ; 10</td><td>0.74</td><td>0.21</td><td class="red">0.952</td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Die Berechnung dieser so konzipierten Anlage ergibt folgende geringe Verlustwerte
+	wie in Tabelle 2 dargestellt. Die Symmetrie der Speisung zeigt Bild
+	3.</p>
+
+	<p>Wie die Tabelle 2 zeigt, gelangen bei 100 Watt Ausgangsleistung auf dem 80m-Band doch 81.4 bis 93.4 Watt und auf dem 40m-Band 80.3
+	Watt zur Antenne. Wenn man auf dem 60m-Band beim Sender 16.9 Watt Ausgangsleistung einstellt, erreichen 15 Watt die Antenne. Diese Werte sind tolerabel, wenn man die, - durch die tiefe Aufhängung und die Nähe
+	zu den Metallelementen des Hauses bedingte -, tiefe Fusspunktimpedanz am Dipol berücksichtigt (Tabelle
+	1). Das symmetrische CL-Anpassnetzwerk muss auf 80 m einen
+	tiefen Realwiderstand herauftransformieren und auf den beiden höheren Bändern grössere komplexe Anteile ausgleichen.</p>
+
+	<p>Durch einen Balun zur Elimination von Gleichtaktanteilen würde
+	eine zusätzliche Verlustquelle eingefügt. Wir haben hier
+	versuchsweise zur Symmetrierung einen 1:1 Luftbalun von 3.5 µH (Güte
+	Q = 100, k = 0.92) am Kopplerausgang eingefügt und die dabei
+	entstehenden zusätzlichen Verluste berechnet: 0.19 dB auf 80m, 2.3
+	dB auf 60m und 1.85 dB auf 40m. Solche doch beträchtlichen
+	Zusatzverluste können wegen der Art der symmetrierenden
+	Anpassschaltung nun mit dem Weglassen eines Baluns vermieden werden.
+	Würde der Balun am Kopplereingang eingesetzt, wären die Verluste
+	durch den Luftbalun selbst zwar kleiner, der Gesamtverlust wäre
+	jedoch auf 60m (1.04 dB) und auf 40m (1.55 dB) wegen grösseren
+	Verlusten im LC-Glied doch um einiges grösser als mit der gewählten
+	Variante ohne Balun.<br />
+	Am Kopplereingang kann, wenn
+	nötig (bei einem Metallgehäuse zwingend), praktisch ohne zusätzliche Verluste eine koaxiale
+	Mantelwellensperre Typ W1JR (z. B.
+	10 Wdg RG-58 auf zwei
+	FT240-43 Ringkernen), oder ein Typ nach W2DU, eingesetzt werden (Abb. 3). Eine
+	Mantelwellensperre beeinflusst weder den Energietransport der Gegentaktanteile im
+	Innern des Koaxialkabels, noch beeinflusst sie am Uebergang zwischen
+	Koaxialkabel und dem symmetrischem Tuner die Impedanzabschluss-verhältnisse für die Gegentaktanteile. Ähnliche
+	Sperren werden auch bei käuflichen Modellen (MFJ 974 HB,
+	BX-1200, Palstar BT1500A) verwendet. Ich habe die Typ-W1JR-Mantelwellensperre zusätzlich eingesetzt, auch wenn ich,
+	- vielleicht aufgrund der sonst schon guten Symmetrie in meinem
+	Antennensystem und dem Kunststoffgehäuse -, keinen Unterschied zum Betrieb
+	ohne diese Sperre feststellen kann. Somit kann man
+	hier auch ohne eine Mantelwellensperre auskommen.<br />
+	Wie man zudem aus der Tabelle ersehen kann, verursacht das Koaxialkabel einen beachtlichen Anteil der Verluste, auch wenn es selbst nur 10m lang ist und nur
+	im "matched line Modus" betrieben wird und so keine zusätzlichen Verluste durch Reflexion (Fehlanpassung) verursacht werden.</p>
+
+	<p>Der Wirkungsgrad dieses Multibanddipols, also der Antenne selbst, ist hier noch nicht berechnet und muss natürlich für die tatsächlich in den Raum abgestrahlte HF
+	zusätzlich berücksichtigt werden. Vor allem auf 40m hat die hier als Ganzwellendipol arbeitende Antenne einen höheren Antennengewinn, der gewisse Verlust wieder
+	wettmacht.</p>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Bild 1:</strong></p>
+			<p>Der symmetrische Koppler mit einer C-Bank für jeden Arm (in Serieschaltung), eine L-Bank
+			parallelgeschaltet in der Mitte, kein Balun.<br />
+			Für den Einsatz
+			im Aussenbereich gegen Wasser und Feuchtigkeit besteht eine
+			entsprechende Abdichtung.<br />
+			Es handelt sich um eine Abwandlung des bekannten
+			Christian-Kopplers (von DL3LAC).</p>
+			<p>Die Fernsteuerung der Relais für die Kapazitäten und
+			Induktivitäten erfolgt im Shack mit Schiebeschaltern
+			(Einstellmöglichkeiten siehe Abbildung 4 und Bild 4)</p>
+		</div>
+		<figure>
+			<img alt="abgewandelter Christiankoppler" height="800" src="Pictures/abgewandelter%20symmetrischer%20Christian-Koppler%20600x800.jpg" width="600" />
+		</figure>
+	</div>
+
+	<div class="media narrow-img">
+		<div class="media-text">
+			<p><strong>Bild 2:</strong></p>
+			<p>Der symmetrische Koppler im Aussenbereich.</p>
+			<p>Die symmetrische Doppelleitung und die Antennenschenkel
+			bestehen aus 2mm Aludraht.</p>
+			<p>Im schwarzen Gehäuse unter dem Koppler befindet sich die Mantelwellensperre
+			gegen allfällige Gleichtaktanteile.</p>
+		</div>
+		<figure>
+			<img alt="symmetrischer Koppler im Aussenbereich" height="472" src="Pictures/symm%20Koppler%20im%20Aussenbereich%20295x472.jpg" width="295" />
+		</figure>
+	</div>
+
+	<div class="media narrow-img">
+		<div class="media-text">
+			<p><strong>Bild 3:</strong></p>
+			<p>Kontrolle der Symmetrie mit zwei Fahrradlämpchen in der
+			Speise-leitung (hier bei 3.5 MHz und
+			2 Watt Sendeleistung).</p>
+		</div>
+		<figure>
+			<img alt="Symmetriekontrolle" height="472" src="Pictures/Symmetriekontrolle%202%20Watt%20400x472.jpg" width="400" />
+		</figure>
+	</div>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Bild 4:</strong></p>
+			<p>Für die Steuerung der Relais werden Schiebeschalter
+			verwendet. Es sind für die drei gewünschten Bänder nur
+			wenige Einstellungen nötig und diese können auf der
+			Liste nebenan schnell abgelesen und eingestellt werden.</p>
+		</div>
+		<figure>
+			<img alt="Steuereinheit Relais" height="472" src="Pictures/Steuereinheit%20Relais%20835x472.jpg" width="835" />
+		</figure>
+	</div>
+
+	<p>Der beschriebene Koppler wird auch für meine vertikale Loop von 14 MHz bis 28 MHz verwendet.
+	Für 1.8 MHz verwende ich den Koppler einarmig mit nur einer C-Bank als asymmetrischen LC-Koppler und betreibe den
+	Dipol am kurzgeschlossenen Hühnerleitereingang als T-Antenne gegen Erde. Beides funktioniert sehr gut.</p>
+
+	<p>Ein grosser Dank gebührt Walter, DL3LH, für die Mithilfe zur Planung
+	und Berechnung der Antennenanlage.</p>
+
+	<p>Ein sehr gutes Programm zur Berechnung der Verluste stellt übrigens Walter, DL1JWD, zur Verfügung: "kleiner
+	Netzwerkanalysator" unter :
+	<a href="https://dl1jwd.darc.de" target="_blank">https://dl1jwd.darc.de</a></p>
+
+	<hr class="divider" />
+	<h2 style="text-align: center">Ein zweites Beispiel:</h2>
+
+	<p>Andere Verhältnisse am Hühnerleitereingang finden sich im Italien-QTH. Dort kann ein fullsize-Dipol mit 2 x 20 m (19,5m) Länge in 10 Meter Höhe aufgehängt werden.
+	Dafür braucht es aber zur Speisung eine 8m lange 600 Ω Doppelleitung, also länger als im obigen Beispiel (wo atypischerweise eine sehr kurze Speiseleitung nötig ist).</p>
+
+	<p>Mit dem EZNEC lassen sich die folgenden Eingangsimpedanzen berechnen:</p>
+
+	<p><strong>Tabelle 3:</strong>
+	Impedanzverhältnisse an dem Dipol 2 x 19.5 m auf
+	10 m Höhe, Kupferdraht 1.13mm Durchmesser (FL-Litze), und 8m langer symmetrischer 600 Ω
+	-Speiseleitung</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<thead>
+				<tr>
+					<th>Frequenz<br />MHz</th>
+					<th>Impedanz am Dipol-Fusspunkt<br />Ω</th>
+					<th>Impedanz am Eingang der 600 Ω Doppeldrahtleitung<br />Ω</th>
+					<th>Impedanzanpassung bei Tiefpass<br />(L in Serie / C parallel)<br />µH&nbsp; /&nbsp; pF</th>
+					<th>Impedanzanpassung bei Hochpass<br />(C in Serie / L parallel)<br />µH&nbsp; /&nbsp; pF</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>3.5</td><td>46 - j48</td><td>64 + j356</td><td>14&nbsp; /&nbsp; 264</td><td><span class="red">123</span>&nbsp; /&nbsp; 144</td></tr>
+				<tr><td>3.65</td><td>53 + j27</td><td>92 + j492</td><td>16&nbsp; /&nbsp; 202</td><td><span class="red">61</span>&nbsp; /&nbsp; 119</td></tr>
+				<tr><td>3.8</td><td>62 + j104</td><td>140 + j666</td><td>17&nbsp; /&nbsp; 162</td><td><span class="red">42</span>&nbsp; /&nbsp; 104</td></tr>
+				<tr><td>5.36</td><td>364 + j1160</td><td>286 - j1010</td><td>13&nbsp; /&nbsp; 40</td><td>9.3&nbsp; /&nbsp; 68</td></tr>
+				<tr><td>7.1</td><td>5400 - j1679</td><td>67 - j175</td><td>3.5&nbsp; /&nbsp; 20</td><td>2&nbsp; /&nbsp; 146</td></tr>
+				<tr><td>10.1</td><td>104 - j437</td><td>425 + j1292</td><td>7.3&nbsp; /&nbsp; 45</td><td>11&nbsp; /&nbsp; 34</td></tr>
+				<tr><td>14.18</td><td>3033 + j1409</td><td>241 + j674</td><td>3.6&nbsp; /&nbsp; 49</td><td>6.5&nbsp; /&nbsp; 35</td></tr>
+				<tr><td>18.1</td><td>96 - j181</td><td>92 - j146</td><td>1.0&nbsp; /&nbsp; 20</td><td>0.73&nbsp; /&nbsp; 75</td></tr>
+				<tr><td>21.2</td><td>1747 + j1633</td><td>441 - j1019</td><td>2.8&nbsp; /&nbsp; 14</td><td>2.2&nbsp; /&nbsp; 21</td></tr>
+				<tr><td>24.95</td><td>122 - j413</td><td>145 + j461</td><td>1.8&nbsp; /&nbsp; 35</td><td>4.3&nbsp; /&nbsp; 23</td></tr>
+				<tr><td>28.5</td><td>1419 + j1408</td><td>127 + j56</td><td>0.4&nbsp; /&nbsp; 69</td><td>0.9&nbsp; /&nbsp; 78</td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Wie aus der Tabelle 3 ersichtlich ist, sollte hier ein
+	<span class="u">Antennenkoppler in Tiefpasskonstellation</span> mit der Induktivität in Serie und
+	der Kapazität parallel
+	gewählt werden. Der Grund liegt bei den sonst im 80m-Band nötigen hohen Induktivitäten (von bis zu 123 µH; siehe letzte Spalte rechts). Dies aufgrund der
+	Transformation der Impedanz durch die Hühnerleiter. Bei einem symmetrischen Koppler bedeutet eine Tiefpassvariante ein Mehraufwand in der Konstruktion,
+	da die Spulen alle doppelt angefertigt werden müssen. Da für die Induktivitäten jedoch eine Serienschaltung vorliegt, ergibt sich pro Seite jeweils nur
+	die halbe Induktivität, was die Spulengrösse wiederum reduziert.</p>
+
+	<p>Wie anhand dieses Beispiels ersichtlich ist, lohnt es sich vor dem konkreten Aufbau der Antenne, die zu erwartenden Impedanzen an der Antenne, und die durch
+	die Impedanztransformation durch die Hühnerleiter am Eingang derselben zu erwartende Impedanz, zunächst mit dem EZNEC zu berechnen. Danach kann die Anpassung der
+	jeweiligen komplexen Last vorausbestimmt werden (ich empfehle dafür SimNEC von AE6TY), was für die Wahl des geeigneten Kopplers wegweisend wird.</p>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Bilder 5 und 6:</strong></p>
+			<p>Mein Eigenbau des Tuners in den Bildern rechts zeigt den symmetrischen Antennenkoppler als Tiefpassvariante mit zwei gleichen Spulen-Bänken links und rechts und
+			in der Mitte mit der Kapazitätseinheit. Mit Steckverbindungen lässt sich die Kapazität sowohl für eine hochohmige oder eine niederohmige Anpassung schalten.
+			Am Tunereingang liegt eine Mantelwellensperre (nach W1JR) mit 12 Windungen
+			RG-142 auf einem FT240-31 Ringkern.</p>
+			<p>Die Induktivitäten sind in einer Kaskade mit Schiebeschaltern einstellbar (0.015 µH – 0.03 µH – 0.06 µH – 0.125 µH – 0.25 µH –
+			0.5 µH – 1 µH – 2 µH – 4 µH – 8 µH). Die zwei 8µH-Spulen wurden
+			aus Platzgründen mit Ringkernspulen (T157-2) gefertigt. Die maximale Induktivität
+			beider Seiten in Serie
+			beträgt 31.96 µH.</p>
+			<p>Der parallelgeschaltete Drehkondensator hat maximal 100 pF. Parallel zuschaltbar sind mit den Schiebeschaltern in der Mitte Kapazitäten von<br />
+			50 pF,
+			100 pF, 200 pF, 300 pF sowie 700 pF, womit insgesamt1450 pF zur Verfügung stehen.</p>
+			<p>Das Bild rechts zeigt die symmetrische LC-Einheit vor dem Einbau in das Gehäuse.</p>
+		</div>
+		<div class="gallery">
+			<figure>
+				<img alt="symmetrischer Koppler in Tiefpasskonstellation" height="558" src="Pictures/symm%20Tuner%20420x558.jpg" width="420" />
+			</figure>
+			<figure>
+				<img alt="LC-Block des symmetrischen Kopplers" height="423" src="Pictures/symm%20Tuner%20schr%20420x423.jpg" width="420" />
+			</figure>
+		</div>
+	</div>
+
+	<hr class="divider" />
+	<h2 style="text-align: center">Ein drittes Beispiel :</h2>
+
+	<p>Eine einfache Art zur Symmetrierung schlägt übrigens Walter,
+	DL3LH, vor. Siehe dazu meine Seite:
+	<a href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a> . Mit
+	dieser Methode kann man sich den Aufwand für einen
+	symmetrischen Koppler sparen und es ist auch kein Balun zur
+	Symmetrierung notwendig.</p>
+
+	<p>Giorgio, HB9AWJ&nbsp;&nbsp; ( Kontakt: hb9awj@de-suisse.ch )</p>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span><a class="call" href="index.html">HB9AWJ</a> &middot; swiss shortwave radio station</span>
+		<span>Zurich &middot; JN47GH</span>
+	</div>
+</footer>
+</body>
+</html>

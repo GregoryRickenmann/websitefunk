@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luftbalun</title>
+<link rel="icon" type="image/x-icon" href="Pictures/faviconHB.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+	<nav class="nav" aria-label="Hauptnavigation">
+		<a class="brand" href="index.html">
+			<span class="logo">HB</span>
+			<span class="call">HB9AWJ<small>swiss shortwave radio station</small></span>
+		</a>
+		<input type="checkbox" id="navtoggle" class="nav-toggle" hidden />
+		<label class="nav-burger" for="navtoggle" aria-label="Menü öffnen"><span></span></label>
+		<ul class="nav-links">
+			<li><a href="swiss%20shortwave%20radio%20station%20HB9AWJ.html">Home</a></li>
+			<li><a href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennenkoppler</a></li>
+			<li><a href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a></li>
+			<li><a href="endgespeiste%20Halbwellenantenne.html">endgespeiste Halbwellenantenne</a></li>
+			<li><a href="Monopole%20Groundplane.html">Monopole &ndash; Groundplane</a></li>
+			<li><a class="active" aria-current="page" href="Luftbalun.html">Luftbalun</a></li>
+			<li><a href="cw%20decoder.html">CW Decoder</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="page-hero">
+	<div class="wrap">
+		<p class="eyebrow">swiss shortwave radio station &middot; HB9AWJ</p>
+		<h1>Versuch einer Verlustoptimierung beim Antennenkoppler sowie bei der Symmetrierung anhand eines asymmetrischen LC- oder CC-Tuners unter Verwendung eines <u>Luftbaluns</u> am Kopplerausgang</h1>
+		<p class="subtitle">Trial for transmission loss reduction in a antenna-coupler and for balancing the network in a asymmetric LC-/CC-coupler using an air-balun at the antenna-side of the coupler</p>
+	</div>
+</section>
+
+<main class="article">
+	<h2>1. Teil&nbsp;&nbsp;&nbsp; Einige theoretische Betrachtungen</h2>
+
+	<p>Im Antennenkoppler und auf der Zuleitung zur Antenne können je nach Konzeption der Anlage grosse Verluste auftreten. Diese gilt es zu minimieren. Gestützt
+	auf die umfangreichen Arbeiten von Walter, DL3LH&nbsp; [1], habe ich als Beispiel eine mögliche einfache Lösung gesucht und dabei meinen schon vorhandenen
+	Antennenkoppler MFJ-974HB im Hinblick auf eine Verlustminimierung umgebaut
+	(siehe Bilder unten).</p>
+
+	<p>Da ein LC-Anpassnetzwerk (LC-APN) im Vergleich zu anderen Kopplerprinzipien die geringsten Verluste aufweist, habe ich den als
+	T-Tuner konzipierten Koppler MFJ-974HB (er zeigt eine C-L-C-Bauform) in ein solch einfaches LC-Anpassnetzwerk mit nur zwei Blindkomponenten
+	umgewandelt. Der symmetrische Aufbaus des bestehenden Tuners mit der HF-mässigen Isolation des C-L-C-Blocks erlaubt es, den neu zu
+	konstruierenden L-C-Koppler so zu gestalten, dass alle fünf möglichen Aufbauvarianten (Abb. 1 und Abb. 2), mit der Spule oder dem Kondensator
+	in Serie oder parallel, sowohl gegen den Sender als auch gegen die Antenne hin, eingestellt werden können
+	(Bild 2 und 3). Damit kann ja auch ein hohes oder
+	tiefes Z angepasst werden. Aber der Koppler kann in dieser Konfiguration auch noch als C-C-Koppler
+	(siehe DL3LH, [2]) eingestellt werden (Abb. 1 und 2), womit sich in
+	bestimmten Fällen die Verluste nochmals massiv reduzieren lassen.</p>
+
+	<p>Die Symmetrierung erfolgt nach dem Umbau jetzt nicht mehr vor dem APN, sondern wie es besser ist, hinter dem APN (siehe
+	DL3LH,
+	[1]). Auch W8JI äussert sich aufgrund ausgedehnter Messungen dezidiert zur
+	Frage, wohin ein Balun, - vor oder nach dem Anpassnetzwerk -,
+	hinkommen soll: "A balun on the input of a floating unbalanced
+	network is a waste of time" (www.w8ji.com/tuner_baluns.htm). Zur Symmetrierung wird
+	hier ein verlustarmer Luftbalun verwendet, der direkt an der Hinterwand des Kopplers angesteckt wird
+	(Bild 4). Dieser Luftbalun kann antennenseitig mit der Zweidrahtleitung so verbunden werden, dass er entweder als
+	"1:1 HF-Transformator"
+	oder als "Phasen-Umkehr-Transformer" (PUT) arbeitet, was je nach den Impedanzverhältnissen an dieser Stelle eine weitere Reduktion der Verluste
+	erlaubt.</p>
+
+	<div class="media narrow-img">
+		<div class="media-text">
+			<p>Abbildung 1:<br />
+			<br />
+			die vier verschiedenen LC-Varianten und die CC-Anordnung</p>
+		</div>
+		<figure>
+			<img alt="verschiedene LC- und CC-Anordnungen" src="Pictures/LC-Varianten650x326.jpg" width="650" height="326" />
+		</figure>
+	</div>
+
+	<div class="media narrow-img">
+		<div class="media-text">
+			<p>Abbildung 2:<br />
+			<br />
+			Das Schaltbild des umgebauten<br />
+			Kopplers</p>
+		</div>
+		<figure>
+			<img alt="Schaltbild umgebauter Koppler" src="Pictures/Schema%20Antennenkoppler750x444.jpg" width="750" height="444" />
+		</figure>
+	</div>
+
+	<p>Da, ausser bei einigermassen angepassten Impedanzen, die Verluste auf einem Koaxialkabel wegen der Reflexion sehr schnell ansteigen, kommen
+	zur verlustarmen Anpassung eigentlich nur
+	<strong>Zweidrahtleitungen</strong> als Antennenzuleitungen in Frage. Wird eine solche verwendet, muss die Zuleitungslänge der Hühnerleiter, -
+	abhängig von
+	den vorhandenen Impedanzen am Fusspunkt der Antenne -, geplant werden. Dadurch lassen sich vorteilhafte Impedanzen am Eingang der Zweidrahtleitung (= am Ausgang
+	des Kopplers) realisieren und weitere Verluste vermeiden.</p>
+
+	<p>Für die <strong>Symmetrierung</strong> zum Anschluss an eine
+	Paralleldrahtleitung gibt es viele Lösungen, die jedoch alle ihre
+	entsprechenden Verluste haben. Symmetrierlösungen mit Ferritkernen können nicht unbeträchtliche Verluste erzeugen und weisen bei grösseren Verstärkungen auch
+	gewisse Einschränkungen auf. Die Verwendung eines <strong>Luft-Baluns</strong> stellt eine gute Kompromisslösung dar. DL3LH hat eine
+	für den gesamten KW-Bereich gute Lösung angegeben: zwei verdrillte 1.5mm Kupferlackdrähte werden
+	mit 9 Windungen zu einer Spule von 50 mm Durchmesser und 50 mm Länge gewickelt.
+	Dadurch erhält man auf der Primär- und Sekundärseite eine Spule von etwa 3 bis 3.5 µH. Mit dieser Lösung, welche unter Umständen auch als <strong>
+	Phasenumkehrtransformator (PUT)</strong> geschaltet werden kann, sind die Verluste durch die Symmetrierung
+	gering, wenn diese im Antennensystem an der richtigen Stelle erfolgt. Wie verschiedene Berechnungen
+	(DL3LH,[1]) ergeben und wie oben bereits angetönt wurde, ist der beste Ort
+	eines Baluns nach dem APN, also
+	<u>am Ausgang</u> des
+	Antennenkopplers.</p>
+
+	<p>Ich konnte übrigens beobachten, dass bei der Verwendung eines 1:1 HF-Transformators (wie z. B. eines Luftbaluns) die Impedanzen vom Eingang der HL auf die
+	Balun-Eingangsseite oft in einen Bereich transformiert werden, wo der Realteil kleiner als 50 Ohm und der Imaginärteil induktiv ist. In
+	diesem Fall kann
+	dann der davorgeschaltete Antennenkoppler als CC-Koppler betrieben werden. Dies ergibt eine weitere Verlustminimierung, weil zur Anpassung keine verlustbehaftete
+	Induktivität nötig ist.</p>
+
+	<p>Wie von vielen Autoren gezeigt wurde, hat die einfache LC-Variante
+	eines APN über alles gesehen am wenigsten Verluste. Rechnungen ergeben,
+	dass andere, oft verwendete Koppler (mit mehr als zwei Blindelementen,
+	z. B. Pi-Tuner, T-Tuner), grössere Verluste aufweisen, vor allem wenn nicht die richtige Einstellung gefunden wurde.
+	Deshalb habe ich meinen vorhandenen T-Tuner (Cs-Lp-Cs) in einen
+	(asymmetrischen) LC-Tuner umgebaut mit dem Vorteil der eineindeutigen Resonanzabstimmung.</p>
+
+	<p>Der Koppler kann nach dem Umbau in 5 Varianten betrieben werden, wie aus dem Schema (Abb. 2) ersichtlich ist. Dafür müssen die drei Anschlüsse:
+	«TX», «Masse», «Ant» in drei von den vier möglichen Anschlüssen des LC-Blocks eingesteckt werden, also bei «L», «C1», «C2», oder bei «LC» (Abb.2).</p>
+
+	<h2>2. Teil&nbsp;&nbsp;&nbsp;&nbsp; Ein praktisches Beispiel zur Koppler- und Symmetrierungsauswahl</h2>
+
+	<p>Bei meiner 79 m langen Delta-Loop, welche ich für 80m, 60m und 40m brauche, können mit einem miniVNA-pro folgende Impedanzen gemessen und folgende Verluste auf der
+	Hühnerleiter berechnet werden (Tab. 1):</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<caption>Tabelle 1</caption>
+			<thead>
+				<tr>
+					<th>MHZ</th>
+					<th>Impedanz&nbsp; Z&nbsp; am<br />
+					Einspeisepunkt der Deltaloop<br />
+					<br />
+					Ω</th>
+					<th>Impedanz&nbsp; Z&nbsp; am Eingang der<br />
+					7.5 m langen 450 Ω Hühnerleiter<br />
+					Ω</th>
+					<th>Verlust der 450 Ω - Hühnerleiter<br />
+					<br />
+					<br />
+					dB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3.65</td>
+					<td>160 - j 136</td>
+					<td>158 + j 125 </td>
+					<td>0.032 </td>
+				</tr>
+				<tr>
+					<td>5.358</td>
+					<td>3506 + j 421</td>
+					<td>91 - j 340</td>
+					<td>0.028 </td>
+				</tr>
+				<tr>
+					<td>7.1</td>
+					<td>151 - j 454</td>
+					<td>88 + j 190</td>
+					<td>0.078</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Mit den gegebenen Eingangsimpedanzen an der Hühnerleiter werden die Verluste des (oben beschriebenen) davorgeschalteten Luftbaluns berechnet, respektive die
+	Verluste bei Schaltung des Luftbaluns als Phasenumkehrtransformers (PUT):</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<caption>Tabelle 2</caption>
+			<thead>
+				<tr>
+					<th>MHZ</th>
+					<th>Impedanz  Z  am Eingang der<br />
+					7.5 m langen 450 Ω Hühnerleiter<br />
+					Ω</th>
+					<th>Verlust 1:1 Luft-Balun<br />
+					k = 0.934<br />
+					L<sub>opt</sub> = 3,5µH<br />
+					Q<sub>L</sub> =100<br />
+					dB</th>
+					<th>Verlust 1:4 PUT<br />
+					k = 0.934<br />
+					L<sub>opt</sub> = 3,5µH<br />
+					Q<sub>L</sub> =100<br />
+					dB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3.65</td>
+					<td>158 + j 125 </td>
+					<td>0.28 </td>
+					<td>0.03</td>
+				</tr>
+				<tr>
+					<td>5.358</td>
+					<td>91 - j 340</td>
+					<td>0.31</td>
+					<td>0.07</td>
+				</tr>
+				<tr>
+					<td>7.1</td>
+					<td>88 + j 190</td>
+					<td>0.51</td>
+					<td>0.10</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Aus Tabelle 2 ist ersichtlich, dass die Schaltung des Luftbaluns als PUT in unserem Beispiel die viel geringeren Verluste hat.</p>
+
+	<p>Also wählen wir die Schaltung des Luftbaluns als PUT aus und berechnen die Impedanz am Eingang des PUT, was uns auch aufzeigt, ob der Antennenkoppler als LC- oder
+	CC-Koppler geschaltet werden soll. Der Verlust der entsprechenden Kopplerart wird berechnet und die Gesamtverluste des Systems Koppler + PUT + Speiseleitung (HL)
+	werden bestimmt:</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<caption>Tabelle 3</caption>
+			<thead>
+				<tr>
+					<th>MHZ</th>
+					<th>Impedanz&nbsp; Z am<br />
+					PUT-Eingang<br />
+					L<sub>opt</sub> = 3,5 µH<br />
+					Q<sub>L</sub> = 100<br />
+					Ω</th>
+					<th>Wahl der Art<br />
+					des Kopplers<br />
+					<br />
+					<br /></th>
+					<th>Kopplerverlust<br />
+					LC- respektive CC-<br />
+					Q<sub>L</sub> = 100,Q<sub>C</sub> = 500<br />
+					<br />
+					dB</th>
+					<th>Gesamtverlust<br />
+					Koppler + PUT +<br />
+					Speiseleitung<br />
+					<br />
+					dB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3.65</td>
+					<td>23.96 + j 14.67</td>
+					<td>CC-Koppler</td>
+					<td>P<sub>v</sub>< 0.03</td>
+					<td class="hl">0.090</td>
+				</tr>
+				<tr>
+					<td>5.358</td>
+					<td>78.58 + j19.57</td>
+					<td>LC-Koppler</td>
+					<td>0.04</td>
+					<td class="hl">0.138</td>
+				</tr>
+				<tr>
+					<td>7.1</td>
+					<td>16.87 + j 7.47</td>
+					<td>CC-Koppler</td>
+					<td>P<sub>v</sub>< 0.03</td>
+					<td class="hl">0.208</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Wie man sehen kann, werden einerseits durch die Optimierung des LC-Gliedes
+	(entweder LC- oder wenn möglich CC-Glied), andererseits durch die Wahl der Symmetrierung (hier ist der PUT besser als der 1:1 Luftbalun) und zuletzt durch
+	eine symmetrische Speiseleitung (hier eine 450 Ω Hühnerleitung) sensationell geringe Verluste erreicht!</p>
+
+	<p>Die mühsam erzeugte HF-Leistung geht im berechneten, obigen Beispiel wirklich zum grössten Teil zur Antenne, und sie geht nicht unterwegs als Wärme verloren!</p>
+
+	<p>Abschliessend noch ein Hinweis auf zwei im Internet frei erhältliche
+	Programme, die für die obigen Berechnungen helfen können: für die
+	Impedanzen und Verluste auf Speiseleitungen gibt es ein gutes Programm
+	von AC6LA, &quot;TLDetails&quot;;&nbsp; Ein sehr gutes Programm zur Berechnung der Verluste stellt Walter, DL1JWD, zur Verfügung: "kleiner
+	Netzwerkanalysator"
+	unter : <a href="https://dl1jwd.darc.de" target="_blank">https://dl1jwd.darc.de</a> . Für die Verlustberechnung eines Baluns sei auf (https://gutachten-emvu.jimdo.com – Nr.105) hingewiesen.</p>
+
+	<p>[1, 2, 3]&nbsp; DL3LH, diverse Publikationen; auf Anfrage direkt von DL3LH: (https://gutachten-emvu.jimdo.com/kontakt)</p>
+
+	<p>Giorgio,
+	HB9AWJ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	(Kontakt :&nbsp;&nbsp;hb9awj@de-suisse.ch)</p>
+
+	<h2>Bilder des Luftbaluns sowie des zum asymmetischen L/C-Koppler umgebauten MFJ-974HB</h2>
+
+	<div class="gallery">
+		<figure>
+			<img alt="umgebauter Koppler mit Luftbalun" src="Pictures/umgebauter%20Koppler400x528.jpg" width="400" height="528" />
+			<figcaption>Bild 1: zum asymmetrischen L/C-Koppler umgebauter MFJ-974HB mit dem hinten aufgesteckten Luftbalun</figcaption>
+		</figure>
+		<figure>
+			<img alt="LC-Block" src="Pictures/LC-Block400x439.jpg" width="400" height="439" />
+			<figcaption>Bild 2: der L/C-Block mit der Steckplatte zur Schaltungskonfiguration. Unten sind die zuschaltbaren Kondensatoren sichtbar</figcaption>
+		</figure>
+		<figure>
+			<img alt="umgebauter Koppler Innenansicht" src="Pictures/umgeb%20Koppler%20offen400x400.jpg" width="400" height="400" />
+			<figcaption>Bild 3: Innenansicht des umgebauten Tuners, nun neu mit einer Rollspule anstelle der stufenweise schaltbaren Induktivität</figcaption>
+		</figure>
+		<figure>
+			<img alt="umgebauter Koppler mit aufgestecktem Luftbalun" src="Pictures/Rueckseite%20mit%20Balun400x400.jpg" width="400" height="400" />
+			<figcaption>Bild 4: Rückseite des zum asymmetrischen L/C-Koppler umgebauten Tuners mit aufgestecktem Luftbalun</figcaption>
+		</figure>
+		<figure>
+			<img alt="Luftbalun als 1:1 HF-Transformator" src="Pictures/Luftbalun311x400.jpg" width="311" height="400" />
+			<figcaption>Bild 5: Funktion des Luftbaluns als 1:1 Transformer : Zweidrahtleitung kommt in die beiden roten Buchsen</figcaption>
+		</figure>
+		<figure>
+			<img alt="Luftbalun als Phasen-Umkehr-Transformator geschaltet" src="Pictures/BalunPUTAnschluss400x400.jpg" width="400" height="400" />
+			<figcaption>Bild 6: Funktion des Luftbaluns als Phasen-Umkehr-Transformator, mit eingestecktem Jumper : Zweidrahtleitung kommt in die Buchsen rot und grün</figcaption>
+		</figure>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span><a class="call" href="index.html">HB9AWJ</a> &middot; swiss shortwave radio station</span>
+		<span>Zurich &middot; JN47GH</span>
+	</div>
+</footer>
+</body>
+</html>

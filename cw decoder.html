@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CW Decoder</title>
+<link rel="icon" type="image/x-icon" href="Pictures/faviconHB.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+	<nav class="nav" aria-label="Hauptnavigation">
+		<a class="brand" href="index.html">
+			<span class="logo">HB</span>
+			<span class="call">HB9AWJ<small>swiss shortwave radio station</small></span>
+		</a>
+		<input type="checkbox" id="navtoggle" class="nav-toggle" hidden />
+		<label class="nav-burger" for="navtoggle" aria-label="Menü öffnen"><span></span></label>
+		<ul class="nav-links">
+			<li><a href="swiss%20shortwave%20radio%20station%20HB9AWJ.html">Home</a></li>
+			<li><a href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennenkoppler</a></li>
+			<li><a href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a></li>
+			<li><a href="endgespeiste%20Halbwellenantenne.html">endgespeiste Halbwellenantenne</a></li>
+			<li><a href="Monopole%20Groundplane.html">Monopole &ndash; Groundplane</a></li>
+			<li><a href="Luftbalun.html">Luftbalun</a></li>
+			<li><a class="active" aria-current="page" href="cw%20decoder.html">CW Decoder</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="page-hero">
+	<div class="wrap">
+		<p class="eyebrow">swiss shortwave radio station &middot; HB9AWJ</p>
+		<h1>CW Decoder Einsatz : eine einfache gute Lösung</h1>
+	</div>
+</section>
+
+<main class="article">
+	<p>Heute hat das Tempo beim Morsen gegenüber früher, vor allem aufgrund
+	der technischen und softwaremässigen Mittel, deutlich zugenommen. Um
+	auch mit den früher, noch in langsameren Tempi erlernten
+	Morsefähigkeiten mithalten zu können, ist ein CW-Dekoder sehr
+	hilfreich. Dafür gibt es verschiedene Möglichkeiten, sei es ein im
+	Transceiver eingebauter oder ein externer CW-Decoder oder auch eine
+	entsprechende Software, die dann aber einen Anschluss an einen PC
+	verlangt.</p>
+
+	<p>Ich setzte grosse Hoffnungen in den von Yaesu im FTDX-10 eingebauten
+	CW-Decoder. Leider ist die Performance dieses Dekoders in den
+	meisten Fällen sehr dürftig und somit praktisch unbrauchbar (der
+	Transceiver selbst ist ein sonst exzellentes Gerät mit einem
+	aussergewöhnlich guten Empfänger). Von
+	Alex, <em>VE3NEA</em> gibt es schon lange den äusserst leistungsstarken
+	CW-Skimmer. Nun hat Alex <em>VE3NEA</em> neu eine reduzierte Version zum
+	Dekodieren nur eines einzigen CW-Signals und, als grosser Vorteil,
+	zur Verwendung auf dem Android-Smartphone herausgegeben: den &quot;Morse
+	Expert&quot; (die App ist kostenlos im Play Store erhältlich). Die Performance ist mit dieser App genau so gut wie beim
+	CW-Skimmer, da der gleiche Algorithmus verwendet wird.
+	So bleibt man bei einer solchen Lösung unabhängig von einem zusätzlichen
+	PC, was zum Beispiel bei Portabelbetrieb von Vorteil ist.<br />
+	Ich verwende diesen CW-Dekoder als App (Morse Expert) auf dem
+	Smartphone einerseits als
+	Zusatz für den FTDX-10 zuhause, als auch für meinen FT-891 im
+	Ferien- oder Portabel-QTH.</p>
+
+	<p>Der Einsatz des &quot;Morse Expert&quot; auf dem Smartphone zuzsammen mit meinem
+	FT-891 und FTDX10 sei hier kurz erläutert:</p>
+
+	<p><em>VE3NEA</em>, Alex, publiziert auf seiner Webseite &quot;www.dxatlas.com&quot;&nbsp;eine
+	gute Beschreibung zur Anbindung des Smartphons an den Transceiver.
+	Es lohnt sich, wie von ihm erwähnt, die Audioanbindung direkt über
+	ein Kabel anstatt übers Smartphonemikrofon zu machen. Ich habe seine
+	vorgeschlagene Anpass- und DC-Trennschaltung leicht modifiziert, da
+	der Data-Ausgang bei den Yaesu-Transceivern an der RTTY/DATA-Buchse
+	100 mV an 600 &Omega;&nbsp; liefert&nbsp; (von Alex
+	werden als Spannung im Generellen 600 mV an einer ACC-Buchse
+	angenommen). Die 100 mV am Yaesu-Trasceiver können zusätzlich im
+	Menuepunkt &quot;cw out level&quot; noch heruntergeregelt werden. Für den
+	Mikrofoneingang am Smartphone habe ich eine Eingangsimpedanz von 2.2
+	k&Omega; angenommen und hier soll das
+	Signal mit einigen mV ankommen.</p>
+
+	<div class="gallery">
+		<figure>
+			<img alt="Anpassschaltung für Yaesu" src="Pictures/Anpassschaltung%20fuer%20Yaesu%20560x348.png" width="560" height="348" />
+			<figcaption>Schema von Spannungsteiler und DC-Trennung</figcaption>
+		</figure>
+		<figure>
+			<img alt="Anpassschaltung praktische Ausfuehrung" src="Pictures/Anpassschaltung%20in%20praktischer%20Ausfuehrung%20540x348.jpg" width="540" height="348" />
+			<figcaption>Die Anpassschaltung in praktischer Ausführung</figcaption>
+		</figure>
+	</div>
+
+	<figure>
+		<img alt="Decoding Performance" src="Pictures/Decoding%20Performance%20753x420.jpg" width="753" height="420" />
+		<figcaption><span class="u">CW-Decoder Performance</span>:<br />
+		Morse Expert (on Android phone, from VE3NEA) versus CW-Decoder Yaesu FTDX-10</figcaption>
+	</figure>
+
+	<p>Als CW-Keyer-Speicher verwende ich übrigens den
+	Ultra PicoKeyer von N0XAS, erhältich als Bausatz bei Hamgadgets (Dan
+	W7RF)</p>
+
+	<p>viel Spass und Erfolg beim Dekodieren<br />
+	73, de HB9AWJ,&nbsp; Giorgio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kontakt:&nbsp;
+	(hb9awj@de-suisse.ch)</p>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span><a class="call" href="index.html">HB9AWJ</a> &middot; swiss shortwave radio station</span>
+		<span>Zurich &middot; JN47GH</span>
+	</div>
+</footer>
+</body>
+</html>

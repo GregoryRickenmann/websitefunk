@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Symmetrierung nach DL3LH</title>
+<link rel="icon" type="image/x-icon" href="Pictures/faviconHB.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+	<nav class="nav" aria-label="Hauptnavigation">
+		<a class="brand" href="index.html">
+			<span class="logo">HB</span>
+			<span class="call">HB9AWJ<small>swiss shortwave radio station</small></span>
+		</a>
+		<input type="checkbox" id="navtoggle" class="nav-toggle" hidden />
+		<label class="nav-burger" for="navtoggle" aria-label="Menü öffnen"><span></span></label>
+		<ul class="nav-links">
+			<li><a href="swiss%20shortwave%20radio%20station%20HB9AWJ.html">Home</a></li>
+			<li><a href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennenkoppler</a></li>
+			<li><a class="active" aria-current="page" href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a></li>
+			<li><a href="endgespeiste%20Halbwellenantenne.html">endgespeiste Halbwellenantenne</a></li>
+			<li><a href="Monopole%20Groundplane.html">Monopole &ndash; Groundplane</a></li>
+			<li><a href="Luftbalun.html">Luftbalun</a></li>
+			<li><a href="cw%20decoder.html">CW Decoder</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="page-hero">
+	<div class="wrap">
+		<p class="eyebrow">swiss shortwave radio station &middot; HB9AWJ</p>
+		<h1>Symmetrierung nach DL3LH</h1>
+	</div>
+</section>
+
+<main class="article">
+	<p>Unsymmetrische Anpassnetzwerke (Antennentuner /-koppler) können mit einer Symmetrierung nach DL3LH auf eine einfache Art für
+	symmetrische Anwendungen angepasst werden ohne die Verwendung eines Baluns. Dabei muss eine kleine Asymmetrie in Kauf genommen werden, was aber in den meisten
+	Fällen keine Rolle spielt, da viele Antennenanlagen per se schon eine leichte Asymmetrie aufweisen.</p>
+
+	<p>Mit der hier dargestellten Modifikation eines Anpassnetzwerkes kann einerseits die aufwendige Konstruktion eines symmetrischen Antennenkopplers vermieden und
+	ein vielleicht schon vorhandener asymmetrischer Koppler für die Speisung mit einer symmetrischen Doppelleitung (Hühnerleiter) verwendet werden.</p>
+
+	<p>Andererseits kann man mit dieser Methode auch den Einsatz eines Baluns vermeiden (mit Balun ist hier nicht die Verwendung einer Mantelwellensperre auf dem Koaxialkabel
+	am Tunereingang gemeint, sondern ein zum Symmetrieren verwendeter Balun). Ein Hauptgrund für das Weglassen eines symmetrierenden Balun sind die Verluste, welche in
+	einem solchen auftreten können.</p>
+
+	<p>Die Methode selbst ist einfach. Mittels eines grossen
+	Koppelkondensators in der Minusleitung der symmetrischen
+	Doppelleitung (in einem Hühnerleitungsbein) wird diese Seite der Doppelleitung von der Masse entkoppelt und auf ein höheres
+	Spannungsniveau über Masse (Erde) angehoben.
+	Im Folgenden die Darstellung des Vorschlages
+	von DL3LH mit der entsprechenden mathematisch-physikalischen
+	Erklärung von DL3LH :</p>
+
+	<div class="note quote">
+		<p><em>Eine hochfrequente Leitung arbeitet im Gegentaktbetrieb. Die Spannungen zwischen den Leitern und einem gemeinsamen Potential sind gegenphasig,
+		weil die Spannung zwischen den Leitern in zwei gleiche, gegenphasige symmetrische Spannungen aufgeteilt werden können. Wir erhalten (Bild 1):</em></p>
+
+		<p style="font-style: normal;">U2 = U21 + U22 = ½ U2 - (- ½ U2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			(Gl. 1)</p>
+
+		<p><em>Ist R2 z.B. der reelle Eingangwiderstand einer symmetrischen Zweidrahtleitung, dann liegt die Spannung U2 an R2 und ein „Bein“ der Zweidrahtleitung auf dem Potential gegen Masse
+		Up + U21 und das andere auf Up – U22, wobei die Phase von Up zu berücksichtigen ist Bild 1.<br />
+		<br />
+		Wird Up klein gehalten, sind die resultierenden Summenspannungen:</em></p>
+
+		<p style="font-style: normal;">U21 + Up ≈ Up – U22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			(Gl. 2)</p>
+
+		<p><em>Da keine Antennenanlage wirklich symmetrisch ist und wir immer Gleichtaktanteile haben, kann die zusätzlich erzeugte Unsymmetrie nach (Gl.2) meisten vernachlässigt werden.
+		Akzeptieren wir eine gewisse zusätzliche Unsymmetrie durch unsere Schaltung, dann kann der Balun entfallen.</em></p>
+
+		<p><em>Die Entkopplung der Zweidrahtleitung von Masse und Anhebung auf das Potential Up kann mittels eines verlustarmen Kondensators erfolgen, dessen Kapazitätswert so groß gewählt wird,
+		dass keine, oder nur eine geringe Transformation der Antennenimpedanz erfolgt. Die Schaltung zeigt Bild 2.</em></p>
+
+		<p><em>Der Wert der Entkopplungskapazität Ck liegt in den Grenzen zwischen Ck = 2000 bis max. 6000 pF und darf diesen numerischen Wert nicht übersteigen.Der Serienkondensator muss für
+		die Strombelastung I2 ausgelegt sein. Im praktischen Fall können mehrere Kondensatoren parallel geschaltet werden.</em></p>
+
+		<p><em>Als Beispiel die Berechnung nach Bild 2 rechts:</em></p>
+
+		<p><em>Wir gehen wir von einem verlustlosen Kondensator von C = 4000 pF aus. Bei einer verfügbaren Leistung von Pv = 500 W ist die Spannung über der Last
+		U2 = √ 500 W * 150 Ω = 158,11 V und der Strom I2 = √ 500W / 150 Ω = 1,825 A. Bei f = 3,6 MHz ist der Blindwiderstand des Koppelkondensators Xc = 11 Ω und die
+		Spannung über dem Kondensator Uck = - j 11 Ω * 1,825 A =&nbsp;- j 20,08 V.<br />
+		Die Spannung eilt dem Strom um φ = 90o nach. Die geometrische Summe
+		der Spannungen U2 und Uck ist die Spannung über der Parallelkapazität Cp = 417 pF und berechnet sich aus dem Pythagoras zu U3 = √ (158,11 V)2 + (20,08 V)2 = 159,37 V.
+		Der Phasenwinkel zwischen Uck und U2 ist δ = - artan (20,08/158,11) = - 7,23o und die Spannung fast phasengleich mit U2. Teilen
+		wir (nach Bild 1) die Spannung über der Last in zwei gleiche Anteile auf, dann sind diese U21 = ½
+		Ú2 = 79,06 V und
+		U22 = - 70,06 V. Die beiden Spannungen von Leiter I und II gegen Masse sind einmal die geometrische Summe und das andere
+		mal die Differenz der Spannungen U2 und Uck, weil Uck senkrecht auf U2 steht.<br />
+		Aus der Rechnung folgt U21 + Uck = √ (79.06 V)2 + (20,08 V)2 = 81,57 V und U22 – Uck =
+		<br />
+		√ (79.06 V)2 - (20,08 V)2 = 76,43 V. Wir haben also eine
+		kleine Unsymmetrie in den Spannungen von Leiter I zu Leiter II gegen Masse von 81,57 V zu 76,43 V, die tragbar ist, dafür kann der Balun entfallen.<br />
+		<br />
+		Die Verwendung eines Kondensators nach Bild 2 zur Entkopplung der symmetrischen Leitung von Masse ist für alle Frequenzen gültig, da sich bei
+		steigender Frequenz deren Blindwiderstand weiter verringert.</em></p>
+
+		<div class="gallery">
+			<figure>
+				<img alt="Spannungsschema" height="248" src="Pictures/Spannungsschema%20300x248.png" width="300" />
+				<figcaption><strong>Bild 1:</strong> Eine symmetrische Leitung über einem Potential Up</figcaption>
+			</figure>
+			<figure>
+				<img alt="Beispielschema Symmetrierung" height="180" src="Pictures/Beispielschema350x180.png" width="350" />
+				<figcaption><strong>Bild 2:&nbsp; </strong>Unsymmetrisches LC - Anpassnetzwerk
+				an einer symmetrischen Anordnung mit Koppelkondensator Ck in der
+				Minusleitung<br />
+				(<span>Z<sub>A</sub></span> = Impedanz der Antenne resp. Hühnerleiter)</figcaption>
+			</figure>
+		</div>
+
+		<p class="source">Quellangabe: Optimierung von Antennenanlagen im KW- Bereich Teil 3, "Unsymmetrische Anpassnetzwerke für symmetrische Anwendungen, Symmetrierung nach DL3LH",
+		Institut für Umwelttechnik Nonnweiler / Saar Dr. rer. nat. Schau DL3LH</p>
+	</div>
+
+	<div class="media narrow-img">
+		<div class="media-text">
+			<p>Die
+			Impedanz der angeschlossenen symmetrischen Last wird durch den
+			Koppelkondensator von
+			6 nF nur minim und unwesentlich verändert. Die Spannungsbelastung dieses
+			Kondensators ist gering, jedoch muss dieser für den hohen Strom konzipiert werden. In der Praxis können mehrere Kondensatoren parallel geschaltet
+			werden.</p>
+
+			<p>Wird ein Anpassnetzwerk in Hochpass-Schaltung (mit C seriell und L
+			parallel) verwendet, muss der
+			6 nF-Kondensator nicht in das
+			Hühnerleiterbein, sondern zwischen Generator und L eingesetzt werden. (Bild 3).</p>
+
+			<p>Ich habe einen Antennenkoppler nach obiger Vorgabe konstruiert. Bei
+			der anschliessenden Testung auf Symmetrie mit der
+			"Fahrradlämpchen-Methode" (vgl. auch <a href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennentuner</a>)
+			findet sich keine wahrnehmbare Asymmetrie. Es zeigt sich wie bei
+			meinem symmetrischen Koppler eine gleiche Helligkeit der beiden
+			Fahrradlämpchen.</p>
+		</div>
+		<figure>
+			<img alt="Beispielschema Hochpasskonfiguration" height="165" src="Pictures/Beispielschema%20HP%20325x165.png" width="325" />
+			<figcaption><strong>Bild 3:</strong> Lage des 6 nF-Kondensators bei einem Anpassnetzwerk in Hochpass-konfiguration</figcaption>
+		</figure>
+	</div>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Bild 4 und 5 </strong>(rechts):</p>
+
+			<p>Kleiner asymmetrischer LC-Koppler mit Symmetrierung nach DL3LH.
+			In der rechten oberen Ecke ist der 6 nF-Kondensator
+			(4x1.5 nF parallel) gut sichtbar. (Die Ferritringe auf der
+			koaxialen Zuleitung dienen dem Abblocken allfälliger
+			Gleichtaktströme und sind nicht zum Symmetrieren angebracht).</p>
+
+			<p>Auf dem Bild rechts (5) zeigt die Symmetriekontrolle mit zwei Fahrradlämpchen in der Doppelleitung ein
+			gutes Symmetrieverhalten<br />
+			<small>&nbsp;&nbsp; (hier mit 2 W bei 3.5 MHz an
+			meinem 2x17m Dipol<br />
+			&nbsp;&nbsp;&nbsp; mit
+			einer
+			2.7m langen 600 Ω Doppelleitung)</small></p>
+		</div>
+		<div class="gallery">
+			<figure>
+				<img alt="asymmetrischer Tuner mit Symmetriekontrolle" height="320" src="Pictures/asymmetrischer%20Tuner%20mit%20Symm%20n%20DL3LH335x320.jpg" width="335" />
+			</figure>
+			<figure>
+				<img alt="asymmetrischer Tuner mit Symmetriekontrolle" height="320" src="Pictures/asymmetrischer%20Tuner%20mit%20Symmetriekontrolle267x320.jpg" width="267" />
+			</figure>
+		</div>
+	</div>
+
+	<hr class="divider" />
+
+	<p><strong>Bild 6, 7 und 8</strong>:</p>
+
+	<p>Nach erfolgreichem Testen mit obigem kleinen Koppler erfolgte
+	der Bau eines asymmetrischen Kopplers mit "Symmetrierung nach
+	DL3LH" in
+	qro-Ausführung für bis 1 kW.</p>
+
+	<p>Zum Abstimmen des schleiferlosen Drehkos und eines Variometers
+	werden Getriebemotoren verwendet. Die Rückmeldung über die
+	aktuelle Stellung von Drehko und Variometer erfolgt mittels
+	Potentiometern und wird im Shack relativ als Spannung angezeigt.<br />
+	Hochleistungsrelais mit grosser Spannungsfestigkeit sind für die
+	auftretenden Spannungen bei 1 kW aus-gelegt. Ein Relais ist für die
+	Schaltung je nach hoher oder tiefer Eingangsimpedanz an der
+	Hühnerleiter
+	da. Das andere Relais schaltet die Variometer-spulen parallel oder in
+	Serie, um einen grossen Bereich von 0.9 µH - 40 µH abzudecken.</p>
+
+	<p>Mit Umstecken
+	von Kurzschlussbrücken (auf der Rückseite; Bild rechts unten)
+	kann der Tuner in Hoch- oder Tiefpasskonfiguration
+	betrieben werden.</p>
+
+	<div class="gallery">
+		<figure>
+			<img alt="asymmterischer QRO-Tuner mit symmetrierung nach DL3LH" height="442" src="Pictures/QRO-Tuner%20420x442.jpg" width="420" />
+		</figure>
+		<figure>
+			<img alt="Rückseite mit Steckbox" height="220" src="Pictures/Rückseite%20mit%20Steckbox%20220x220.jpg" width="220" />
+		</figure>
+		<figure>
+			<img alt="Einstellungen in Box 220x220" height="220" src="Pictures/Einstellungen%20in%20Box%20220x220.jpg" width="220" />
+		</figure>
+	</div>
+
+	<p>Der grosse Kondensator zur "Nahezu"-Symmetrierung
+	(respektive die wegen der grossen Strombelastung parallel
+	liegenden Kondensatoren) von hier insgesamt 5.6 nF erkennt
+	man am Boden zwischen Drehko und Getriebe.<br />
+	Zur Elimination von allfälligen Mantelwellen ist am
+	Tunereingang eine entsprechende Sperre (11 Wdg RG-142 auf einem
+	Ringkern FT240-31) angebracht.</p>
+
+	<div class="media">
+		<div class="media-text">
+			<p><strong>Bild 9</strong>:</p>
+
+			<p>Die Fernsteuerung des obigen Kopplers:</p>
+
+			<p>Man erkennt die zwei Relativ-Spannungsanzeigen für die Stellung von Drehko und
+			Variometer, welche das Wiederauffinden von Einstellungen erleichtern. Zum Drehko
+			(150 pF) können
+			weitere Kondensatoren parallel geschaltet werden.
+			Das Variometer
+			hat eine Induktivitätsspanne von 0.9 µH - 40 µH.
+			Für kleinere Induktivitäten wird das Vario-meter ausgeschaltet
+			und mittels einzelner Luftspulen in Kaskaden-schaltung lässt
+			sich eine Induktivität von
+			0.125 µH - 0.875 µH einstellen. Der Schiebeschalter oben am
+			Steuergerät erlaubt über das Hochleistungsrelais die Anpassung
+			an eine Hühnerleiter-Eingangs-impedanz von &gt; 50
+			Ω oder von &lt; 50
+			Ω.</p>
+
+			<p><small>(Variometer und Getriebemotoren sowie
+			das Motoren-Steuergerät (unten) stammen von der Firma Schubert-Gehäuse,
+			www.schubert-gehaeuse.de).</small></p>
+		</div>
+		<figure>
+			<img alt="Fernsteuerung" height="294" src="Pictures/Fernsteuerung%20540x294.jpg" width="540" />
+		</figure>
+	</div>
+
+	<p class="contact-line">Giorgio,&nbsp;HB9AWJ&nbsp;&nbsp;&nbsp; ( Kontakt: hb9awj@de-suisse.ch )</p>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span><a class="call" href="index.html">HB9AWJ</a> &middot; swiss shortwave radio station</span>
+		<span>Zurich &middot; JN47GH</span>
+	</div>
+</footer>
+</body>
+</html>

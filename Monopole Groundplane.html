@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Monopole Groundplane</title>
+<link rel="icon" type="image/x-icon" href="Pictures/faviconHB.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="site-header">
+	<nav class="nav" aria-label="Hauptnavigation">
+		<a class="brand" href="index.html">
+			<span class="logo">HB</span>
+			<span class="call">HB9AWJ<small>swiss shortwave radio station</small></span>
+		</a>
+		<input type="checkbox" id="navtoggle" class="nav-toggle" hidden />
+		<label class="nav-burger" for="navtoggle" aria-label="Menü öffnen"><span></span></label>
+		<ul class="nav-links">
+			<li><a href="swiss%20shortwave%20radio%20station%20HB9AWJ.html">Home</a></li>
+			<li><a href="symmetrischer%20Antennenkoppler.html">symmetrischer Antennenkoppler</a></li>
+			<li><a href="Symmetrierung%20nach%20DL3LH.html">Symmetrierung nach DL3LH</a></li>
+			<li><a href="endgespeiste%20Halbwellenantenne.html">endgespeiste Halbwellenantenne</a></li>
+			<li><a class="active" aria-current="page" href="Monopole%20Groundplane.html">Monopole &ndash; Groundplane</a></li>
+			<li><a href="Luftbalun.html">Luftbalun</a></li>
+			<li><a href="cw%20decoder.html">CW Decoder</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="page-hero">
+	<div class="wrap">
+		<p class="eyebrow">swiss shortwave radio station &middot; HB9AWJ</p>
+		<h1>Realisation einer lambda-viertel Antenne (λ/4) (Groundplane&nbsp; vs&nbsp; Monopol&nbsp; vs&nbsp; vertikaler Dipol) für 20m, 17m, 15m, 12m und 10m</h1>
+		<p class="subtitle">Realization of a λ/4 antenna (groundplane vs monopole vs vertical dipole) for 20m, 17m, 15m, 12m und 10m</p>
+	</div>
+</section>
+
+<main class="article">
+	<p>Die folgende kurze Darstellung zeigt eine mögliche Lösung für eine vertikale Antenne für alle oberen Kurzwellenbänder aufgrund von baulichen Einschränkungen beim Erstellen einer Antenne an einem Gebäude.</p>
+
+	<figure>
+		<img alt="Lambda-viertel Antenne Skizze" src="Pictures/Lambda-viertel%20Antenne%20600x716.jpg" width="600" height="716" />
+		<figcaption>Bild 1</figcaption>
+	</figure>
+
+	<h3><u>Es liegen hier folgende bauliche Vorbedingungen vor</u>:</h3>
+
+	<p>6m über Boden besteht ein breite Metallverkleidung einer Terrassenbrüstung und der Terrassenecke. In der Ecke kann eine vertikale Antenne angebracht werden, wobei ein direkter, einfacher Zugang zur Antenne besteht, was wiederum ein schnelle Längenveränderung der Teleskopantenne erlaubt<br />(Bild 1).<br />Die Metallumfassung der Terassenbrüstung ist mit der Blitzschutzanlage des Gebäudes verbunden. Die Blitzschutzanlage geht unten in das Metallgeflecht des Eisenbetons der Gebäudewanne über (sogenannter Fundamenterder). Eine direkte Verbindung vom Eisen des Eisenbetons ins Erdreich besteht nicht und es liegt somit auch keine richtige HF-Erdung vor (Bild 1, rechts).<br /><u>Der Uebergangswiderstand zwischen dem Eisengeflecht im Betonsockel und dem darumliegenden Erdreich ist nicht bekannt</u>.</p>
+
+	<p>Aufgrund der Umgebung bei und am Haus lassen sich nicht genügend Radials in den dafür nötigen Richtungen aufspannen.</p>
+
+	<p>Gewünscht ist zusätzlich die Möglichkeit einer schnellen Montage/Demontage der Antenne, die jeweils nur für die Dauer des Betriebs in wenigen Minuten aufgestellt oder demontiert werden kann. Die Längenveränderung des Strahlers soll einfach und schnell erfolgen können. Bild 2 zeigt die Antenne mit Masthalterung. Das ganze Gebilde kann in der Brüstungsecke hinter dem Anpassnetzwerk einfach von oben her eingesteckt werden (Bild 3 und 4).</p>
+
+	<h3><u>Mögliches Antennenkonzept:</u></h3>
+
+	<p>Aufgrund der obigen Bedingungen bietet sich als sehr gute Lösung eine vertikale, bezüglich Länge variable, Teleskopantenne an. Der Bandwechsel kann wegen dem leichten Zugang über die Terasse zur Antenne durch Verändern der Vertikalhöhe des Strahlers auf jeweils λ/4 des gewünschten Bandes (20m, 17m, 15m, 12m, 10m Band) erfolgen. Die Teleskopantenne lässt sich mit ineinanderschiebbaren Alurohren leicht realisieren (Bild 2).</p>
+
+	<p>Die Antenne kann entweder als erhöht aufgebauter Monopol, mit dem gesamten Metallgerüst des Hauses und dem Eisen des Eisenbetons der Gebäudewanne als Gegengewicht, betrachtet werden. Ein zusätzliches Gegengewicht ist dann nicht da.<br />Alternativ können, aufgrund des 6m über Boden liegenden Speisepunktes der Antenne, vertikal nach unten hängende λ/4-Drähte (je einer pro Band) als Gegengewicht zum Strahler angebracht werden. Das Antennengebilde kann dann als Mischung eines Vertikaldipols und einer geerdeten Groundplane angesehen werden. Die Antenne ähnelt so einem vertikalen Dipol.</p>
+
+	<h3><u>Für die Realisation stellen sich folgende Fragen</u>:</h3>
+
+	<p>- Fusspunktimpedanz: von welchem Realwiderstand (bei Resonanz, Strahlerlänge genau auf λ/4 eingestellt) muss am Fusspunkt des Strahlers ausgegangen werden? Es handelt sich ja weder um einen klassischen Monopol mit richtiger HF-Erde als Gegengewicht, noch um eine klassische Groundplane und auch nicht um einen richtigen Vertikaldipol.<br />Zudem: Ein gewisser Erdverlust dürfte vorliegen, aber wie gross ist dieser und wie stark wirkt er sich aus?</p>
+
+	<p>- Verkürzungsfaktor des Strahlers: um welchen Betrag muss die physische Länge des λ/4-Strahlers gekürzt werden? Der Verkürzungsfaktor vk ergibt sich ja aus der Dicke des verwendeten Aluminiumrohres und aus den Umgebungseinflüssen.</p>
+
+	<p>- Ist die Lösung als (erhöhter) Monopol allein besser, oder ist die Lösung mit dem zusätzlichen Anbringen von vertikal herunterhängenden λ/4-Drähten als Gegengewicht besser?</p>
+
+	<div class="gallery">
+		<figure>
+			<img alt="Teleskopantenne" src="Pictures/Teleskopantenne%20187x700.jpg" width="187" height="700" />
+			<figcaption>Bild 2: teleskopiebare Alurohre für den Strahler mit oben isoliertem Halterungsmast</figcaption>
+		</figure>
+		<figure>
+			<img alt="Strahler eingefahren" src="Pictures/Strahler%20eingefahren%20240x700.jpg" width="240" height="700" />
+			<figcaption>Bild 3: Der Strahler mit der Masthalterung, hinter LC-Glied eingesteckt</figcaption>
+		</figure>
+		<figure>
+			<img alt="Strahler ausgefahren" src="Pictures/Strahler%20ausgefahren%20252x700.jpg" width="252" height="700" />
+			<figcaption>Bild 4: Strahler ausgefahren und auf der LC-Einheit auf die Sechskantmuttern eingesteckt (Detail im Bild 5)</figcaption>
+		</figure>
+	</div>
+
+	<p><u>Messungen vor Ort mit dem miniVNA pro</u>, <u>Simulationen mit dem EZNEC</u> und Messungen über SDR-Stationen im Internet ergeben auf die obigen Fragen Folgendes:</p>
+
+	<p>Die Antenne mit den vertikalen λ/4-Gegengewichten (wie in Bild 1 gezeichnet), welche annähernd als Vertikaldipol betrachtet werden kann, wird hier genauer analysiert, Eine Simulation des erhöhten Monopols mit dem EZNEC ist enorm schwierig. Nach vielen Versuchen zeigte es sich, dass es fast unmöglich ist, die Realität genau abzubilden. Schon kleine Veränderungen am "Nachbau" des Metallgerüstes in der Simulation zeigen sofort grosse Veränderungen an der Fusspunktimpedanz und der Stromverteilung auf den Metallelementen. Dazu kommt, dass der Uebergangswiderstand in die umgebende Erde nicht bekannt ist. Ich beschränke mich deswegen auf die Analyse der Variante mit den definierten Gegengewichten, was viel übersichtlicher ist.</p>
+
+	<div class="table-wrap">
+		<table class="data">
+			<thead>
+				<tr>
+					<th></th>
+					<th colspan="3">Realwerte Fusspunktimpedanz</th>
+				</tr>
+				<tr>
+					<th>MHz</th>
+					<th>miniVNA<br />Messung an der Antenne<br /><small>(mit den λ/4-Gegengewichten)</small><br />Ω</th>
+					<th>EZNEC Pro/2+<br />Simulation Vertikaldipol inklusive Metallelemente des Hauses; 6m über Boden<br />Ω</th>
+					<th>EZNEC Pro/2+<br />Simulation Vertikaldipol freistehend; 6m über Boden<br />Ω</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>14.175</th>
+					<td>81</td>
+					<td>95</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<th>18.1</th>
+					<td>78</td>
+					<td>87</td>
+					<td>96</td>
+				</tr>
+				<tr>
+					<th>21.2</th>
+					<td>61</td>
+					<td>76</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<th>24.95</th>
+					<td>72</td>
+					<td>84</td>
+					<td>91</td>
+				</tr>
+				<tr>
+					<th>28.5</th>
+					<td>65</td>
+					<td>95</td>
+					<td>92</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<p>Bei den Simulationen mit dem EZNEC Pro/2+ werden folgende Parameter verwendet: Ground type: Real/High Accuracy; Ground characteristic: Average; Strahler: Aluminium; Segment-Dicken von 18mm / 15mm / 10mm / 5mm; Gegengewicht isolierter Kupferdraht 1.5mm.</p>
+
+	<p>Anmerkung zu den Messungen: der Realanteil des Fusspunktwiderstandes verändert sich im Uebrigen nur unwesentlich, wenn nur das Metallgerüst von Brüstung und Blitzschutz allein als Gegengewicht verwendet wird.</p>
+
+	<p>Wie ist nun diese Fusspunktimpedanz zu interpretieren?<br />Bei einer Monopole-Antenne oder einer Ground plane würde man einen Realwiderstand von etwa 36 Ω erwarten. Da der Realanteil hier aber viel höher ist, könnte man vermuten, dass es sich bei der Antenne mit dem einen vertikalen λ/4-"Radial" doch um einen vertikalen Dipol handelt, wobei der untenliegende Schenkel dann mittig "geerdet" ist.</p>
+
+	<p>Simuliert man einen Vertikaldipol ohne Metallumgebung mit den Parametern wie oben auf 6m über Boden, ergeben sich noch höhere Realwiderstände (Spalte ganz rechts in der Tabelle oben). Durch das Hinzufügen der Metallstrukturen (mittlere Spalte in der Tabelle oben) nähern sich die Werte den in der Realität gemessenen Fusspunktimpedanzwerten an (ausser im 10m-Band). Das Metall am Haus führt zu einer Verminderung der Fusspunktimpedanz des Vertikaldipols, was auch zu erwarten war. Die Hausecke (Holz, darüber dünne Steinfaserfassadenplatte) kann nicht simuliert werden (würde die Impedanz zusätzlich senken).</p>
+
+	<p>Obige Messungen deuten schon sehr stark darauf hin, dass die Antenne mit dem λ/4-Gegengewicht einem Vertikaldipol entspricht. Das EZNEC zeigt, - sowohl mit als auch ohne die Metallelemente- , bei beiden Simulationen einen im Betrag sehr ähnlichen Strombeschlag auf den strahlenden Drähten. Durch das Aufrechnen der leicht differenten Realwiderstände kommt man dann bei beiden Modellen auf praktisch die gleiche eingespiesene Leistung. Dies würde dafür sprechen, dass ein allfälliger Erdverlustanteil weniger davon abhängt, ob der vertikale Dipol frei im Raum ist oder mit den Metallelementen des Hauses verbunden ist.</p>
+
+	<p>Welche Variante, "erhöhter" Monopol oder "vertikaler Dipol" ist nun zu bevorzugen?<br />Einerseits ist die Simulation des Monopols mit dem EZNEC äusserst schwierig, wenn nicht unmöglich. Von Seiten der Simulation erhalten wir somit keine Information, die uns bei der Entscheidungsfindung helfen könnte. Meine Messungen mit dem miniVNA am Monopol ergaben, dass auf 20m der Strahler sehr stark über λ/4 verlängert werden muss, um ohne Blindanteile resonant zu sein. Das Metall am Haus ist auf dem 20m Band hier ein ungeeignetes (nicht resonantes) Gegengewicht. Zudem dürfte beim Monopol das Abstrahlungsdiagramm aufgrund der asymmetrischen Metallstruktur gegen Boden hin (Hausecke) nicht optimal sein. Im Versuchsbetrieb des Monopols (ohne die vertikalen Gegengewichte) ergaben sich auf einigen Bändern parasitäre HF-Wirkungen im Shack.<br />Die Variante mit den vertikalen resonanten Gegengewichten ist hier offensichtlich die bessere Lösung. Auch dürfte man damit einen kleineren Erdverlustanteil zu erwarten haben als bei der unklar definierten "Erdung" der unteren Monopolhälfte von Metall am Haus und umgebender Erde.</p>
+
+	<p>Um die Frage nach einem Erdverlustanteil, respektive nach dem Wirkungsgrad der Antenne, auf andere Art anzugehen, wurde die Antenne auf dem 20m- und 17m-Band mit einer vertikalen endgespeisten λ/2-Antenne (auch mit LC-Anpassung) verglichen. Der Vergleich ist wegen Folgendem aber eingeschränkt: der endgespeiste λ/2-Draht lag mehr als λ/4 höher über Boden und bei der unteren Hälfte des Halbwellenstrahlers befanden sich keine störende Hausecke und keine Metallabdeckung. Der Vergleich der Antennen erfolgte im Internet über KiwiSDR-Stationen in Schweden, Irland und Spanien, mit jeweils Umschalten von einer Antenne zur anderen. Auf 17m fanden sich bei den Empfängerstationen kein S-Meter-Unterschied zwischen der neuen Antenne und dem vertikalen λ/2-Strahler, auf 20m war die Antenne gleichauf oder bis maximal 1/2 S-Stufe schlechter als beim λ/2-Stahler. Falls bei der obig beschriebenen Antenne ein Erdverlust vorliegen sollte, kann dieser nicht sehr gross sein.</p>
+
+	<p>Der noch unbekannte Verkürzungsfaktor vk ist einfach zu bestimmen: nach dem Einstellen der Rohrlänge auf die gewünschte Resonanzfrequenz (Blindanteil um null beim Messen mit dem VNA) kann die eingestellte Rohrlänge des Strahlers gemessen werden und der vk lässt sich nun berechnen. Beim hier dargestellten Fall mit Rohrdicken zwischen 18mm (unten) und 5mm (oben) zeigen sich, je nach gewähltem Band, Werte um etwa 0.94.</p>
+
+	<p>Für die Anpassung an das 50 Ω Koaxialkabel habe ich eine LC-Anpassung mit C in Serie und L parallel gewählt (Bild 5). Damit ist der Strahler galvanisch geerdet und allfällige statische Aufladungen werden abgeleitet. Die Vorausberechnung der LC-Anpassung mit dem Programm „kleiner Netzwerkanalysator“ von Walter, DL1JWD, zeigt, dass man mit einer für alle 5 Bänder gleichen, also fixen Einstellung, mit 1 µH für die Spule und mit 330 pF für den Kondensator ein perfektes Resultat erreicht. Gegenbenenfalls kann mit kleinen Aenderungen der Strahlerlänge noch feingetunt werden. So kann auf allen 5 Bändern zwischen 14 MHz und 30 MHz ein SWR zwischen 1.0 und 1.2 erreicht werden. Ein Antennentuner ist nicht nötig. Der Verlust von HF durch Transport und Anpassung (Koaxialkabel H155 von19 m Länge und CL-Anpassglied am Strahlerfusspunkt) beträgt übrigens 0.71 dB (davon 0.03 dB für die Anpassung und 0.68 dB für den Transport im Koaxialkabel !)</p>
+
+	<div class="gallery">
+		<figure>
+			<img alt="LC-Glied" src="Pictures/LC-Glied%20400x533.jpg" width="400" height="533" />
+			<figcaption>Bild 5 links: Auf die LC-Einheit kann der Strahler direkt aufgesetzt werden (das Alurohr der Strahlerbasis passt innen genau auf die Sechskantmuttern)</figcaption>
+		</figure>
+		<figure>
+			<img alt="vertikale Radials" src="Pictures/vertikale%20Radials%20417x533.jpg" width="417" height="533" />
+			<figcaption>Bild 6 rechts:<br />Das Alurohr des Strahlers ist auf die Sechskantmuttern oben an der LC-Einheit aufgesetzt. Man sieht die parallel angebrachten, nach der Brüstung vertikal nach unten hängenden Radials für die 5 Bänder sowie die gleichzeitige Verbindung an die Masse der Metallbrüstung</figcaption>
+		</figure>
+		<figure>
+			<img alt="Schema LC-Anpassung" src="Pictures/LC-Glied%20Vertikalantenne%20175x175.png" width="175" height="175" />
+		</figure>
+	</div>
+
+	<p>Bei der dargestellten Lösung handelt es sich somit um eine, - pro Band einstellbare- , Monoband-Vertikal-Antenne, die am ehesten einem vertikalen Dipol entspricht und schnell auf- und abgebaut werden kann.</p>
+
+	<p><u>Anmerkung zu den Simulationen mit dem EZNEC und zur Frage "Vertikaldipol"</u>: Ich möchte hier auf das Buch von Gerd Janzen, DF6SJ, mit dem Titel "Monopolantennen und Vertikalantennen" (1999) hinweisen. Gerd zeigt in diesem excellenten Buch wie mit Hilfe des Simulationsprogrammes EZNEC Fragen zu Monopol- und Vertikalantennen sehr gut analysiert werden können. Ein Muss für jeden, der diese Antennstrukturen genau verstehen möchte. Die Simulation mit Hilfe von PC und den modernen Analyseprogrammen eröffnet hier ungeahnte Möglichkeiten. So wird z. B. in diesem Buch gezeigt, dass bei mehreren Radials praktisch nur das im gegebenen Fall resonante Radial Strom führt und somit hf-mässig aktiv ist und andere, nicht resonante Radials, von der HF wie "nicht beachtet" werden. Diese Erkenntnis konnte ich auch im obigen Fall anhand einer Simulation bestätigen. Die mit einem Abstand von wenigen Zentimeter parallel herunterhängenden Radials (Bild 6) stören sich gegenseitig nicht .</p>
+
+	<p>73, HB9AWJ, Giorgio&nbsp;&nbsp; ( Kontakt: hb9awj@de-suisse.ch )</p>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span><a class="call" href="index.html">HB9AWJ</a> &middot; swiss shortwave radio station</span>
+		<span>Zurich &middot; JN47GH</span>
+	</div>
+</footer>
+</body>
+</html>
