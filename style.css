@@ -113,13 +113,10 @@ sub, sup { line-height: 0; }
 
 .brand .logo {
 	width: 30px; height: 30px;
-	display: grid;
-	place-items: center;
+	display: block;
+	flex: none;
 	border-radius: 8px;
-	background: linear-gradient(135deg, var(--brand), var(--navy));
-	color: #fff;
-	font-size: 13px;
-	font-weight: 800;
+	object-fit: contain;
 	box-shadow: var(--shadow-sm);
 }
 .brand .call { font-size: 1.05rem; }
@@ -263,6 +260,24 @@ main.article > h3 { max-width: var(--measure); }
 .article h3 {
 	font-size: 1.2rem;
 	margin: 2em 0 .5em;
+}
+
+/* Titel der beiden Hauptteile (1. / 2.) — deutlich grösser als die Zwischentitel */
+.article h2.part-title {
+	max-width: none;
+	font-size: clamp(1.6rem, 3.2vw, 2.15rem);
+	text-align: center;
+	margin: 1.6em 0 1em;
+	padding-bottom: .5em;
+	border-bottom: 3px solid var(--accent);
+}
+.article h2.part-title .sub {
+	display: block;
+	margin-top: .5em;
+	font-size: .52em;
+	font-weight: 600;
+	line-height: 1.45;
+	color: var(--muted);
 }
 
 .section-label {
