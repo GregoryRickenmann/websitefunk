@@ -296,7 +296,7 @@ main.article > h3 { max-width: var(--measure); }
 .center { text-align: center; }
 .divider {
 	border: 0;
-	height: 1px;
+	height: 3px;
 	background: var(--border);
 	margin: 3em auto;
 	max-width: 340px;
